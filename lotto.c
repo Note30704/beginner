@@ -87,7 +87,7 @@ int	main(void)
 {
 	int	N;
 
-	scnaf("%d", &N);
+	scanf("%d", &N);
 	ran(N);
 	return (0);
 }
