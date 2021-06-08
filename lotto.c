@@ -16,17 +16,17 @@ int	ft_checker(int *lt, int number)
 	return (1);
 }
 
-void	ft_sort(int n, int *lt)
+void	ft_sort(int *lt)
 {
 	int	i;
 	int	j;
 	int	tmp;
 
 	i = 0;
-	while (i < n)
+	while (i < 6)
 	{
 		j = i + 1;
-		while (j <= n)
+		while (j < 6)
 		{
 			if (lt[i] > lt[j])
 			{
@@ -45,12 +45,10 @@ void	ran(int n)
 	int	number;
 	int	i;
 	int	j;
-	int	k;
 	int	count;
 	int	lt[n][6];
 
 	srand(time(NULL));
-
 	i = 0;
 	while (i < n)
 	{
@@ -69,9 +67,7 @@ void	ran(int n)
 				}
 			}
 		}
-
-		ft_sort(n, lt[i]);
-
+		ft_sort(lt[i]);
 		j = 0;
 		while (j < 6)
 		{
